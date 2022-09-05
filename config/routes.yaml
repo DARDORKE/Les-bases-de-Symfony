@@ -3,9 +3,5 @@ controllers:
     type: attribute
 
 index:
-    path: /
-    controller: App\Controller\DefaultController::index
-
-post_list:
-        path: /liste-des-articles
-        controller: App\Controller\PostController::list
+    path: /auteur-du-blog
+    controller: App\Controller\AuteurController::index

@@ -11,4 +11,9 @@ class DefaultController
     {
         return new Response('Hello World !');
     }
+
+    public function contact(): Response
+    {
+        return new Response('Bonjour vous êtes sur la page de contact');
+    }
 }
