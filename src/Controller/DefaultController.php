@@ -3,9 +3,10 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class DefaultController
+class DefaultController extends AbstractController
 {
     public function index(): Response
     {
@@ -14,6 +15,8 @@ class DefaultController
 
     public function contact(): Response
     {
-        return new Response('Bonjour vous êtes sur la page de contact');
+        return $this->render('default/contact.html.twig', [
+            'name' => 'Kévy',
+        ]);
     }
 }

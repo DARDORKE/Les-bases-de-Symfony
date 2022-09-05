@@ -5,3 +5,11 @@ controllers:
 index:
     path: /auteur-du-blog
     controller: App\Controller\AuteurController::index
+
+contact:
+    path: /contact
+    controller: App\Controller\DefaultController::contact
+
+post_item:
+    path: /article/fonctionnement-des-applications-symfony
+    controller: App\Controller\PostController::item

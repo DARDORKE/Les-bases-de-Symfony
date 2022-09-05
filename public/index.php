@@ -1,23 +1,32 @@
 <?php
-// Créez un contrôleur qui servira à présenter l'auteur d'un blog et qui correspondra à
-// la déclaration de route suivante :
-//			index:
-//			    path: /auteur-du-blog
-//			    controller: App\Controller\AuteurController::index
-// Votre contrôleur devra afficher "Bonjour, je suis 'nom' 'prénom',
-// j'ai '00'ans et je suis l'auteur de ce blog!"Il y a deux options de "difficulté"
-// possibles pour la réalisation de cet exercice :
+// Modifiez le contrôleur suivant pour faire appel à un template Twig que vous écrirez
+// en reprenant le code HTML présent dans le code.
+// <?php
 //
-//Vous écrivez votre phrase en une seule chaîne de caractère par exemple :
-// Vous écrivez votre phrase en une seule chaîne de caractère par exemple :
-// "Bonjour, je suis Sacha De Bourg-Palette, j'ai 9 ans et je suis l'auteur de ce blog!".
+// # src/Controller/PostController.php
+// namespace App\Controller;
 //
-//Si vous êtes plus à l'aise, vous pouvez effectuer une interpolation en effectuant quelque chose comme  :
+// use Symfony\Component\HttpFoundation\Response;
 //
-//CTRL+C pour copier, CTRL+V pour coller
-//1
-//"Bonjour, je suis $nom $prenom, j'ai $age ans et je suis l'auteur de ce blog!"
-//Vous aurez alors à déclarer des variables dans votre contrôleur, comme vous le feriez en PHP .
+// class PostController
+// {
+//    public function item(): Response
+//    {
+//        $post = [
+//            'title' => 'Fonctionnement des applications Symfony',
+//            'author' => 'Pierre Dupont',
+//        ];
+//
+//        return new Response('<h1>'.$post['title'].'</h1><p>Écrit par '.$post['author'].'.</p>');
+//    }
+// }
+// Puisqu'il s'agit d'une nouvelle méthode, n'oubliez pas d'ajouter la route suivante :
+//
+// # config/routes.yaml
+//
+// post_item:
+//    path: /article/fonctionnement-des-applications-symfony
+//    controller: App\Controller\PostController::item
 
 use App\Kernel;
 
