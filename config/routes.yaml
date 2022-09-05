@@ -1,15 +1,15 @@
-controllers:
-    resource: ../src/Controller
-    type: attribute
-
 index:
-    path: /auteur-du-blog
-    controller: App\Controller\AuteurController::index
+    path: /
+    controller: App\Controller\AccueilController::index
+
+articles:
+    path: /articles
+    controller: App\Controller\ArticlesController::index
+
+a-propos:
+    path: /a-propos
+    controller: App\Controller\AproposController::index
 
 contact:
     path: /contact
-    controller: App\Controller\DefaultController::contact
-
-post_item:
-    path: /article/fonctionnement-des-applications-symfony
-    controller: App\Controller\PostController::item
+    controller: App\Controller\ContactController::index
