@@ -1,32 +1,19 @@
 <?php
-// Modifiez le contrôleur suivant pour faire appel à un template Twig que vous écrirez
-// en reprenant le code HTML présent dans le code.
-// <?php
+// L'objectif va être de mettre en place ces pages :
 //
-// # src/Controller/PostController.php
-// namespace App\Controller;
+//L'accueil (route : / )
 //
-// use Symfony\Component\HttpFoundation\Response;
+//La page qui contient les articles ( routes : /articles )
 //
-// class PostController
-// {
-//    public function item(): Response
-//    {
-//        $post = [
-//            'title' => 'Fonctionnement des applications Symfony',
-//            'author' => 'Pierre Dupont',
-//        ];
+//La page de contact ( route : /contact)
 //
-//        return new Response('<h1>'.$post['title'].'</h1><p>Écrit par '.$post['author'].'.</p>');
-//    }
-// }
-// Puisqu'il s'agit d'une nouvelle méthode, n'oubliez pas d'ajouter la route suivante :
+//La page '' A propos'' ( route : /a-propos)
 //
-// # config/routes.yaml
+//Vous aurez donc à créer plusieurs routes, plusieurs contrôleurs ainsi que plusieurs templates.
 //
-// post_item:
-//    path: /article/fonctionnement-des-applications-symfony
-//    controller: App\Controller\PostController::item
+//N'hésitez pas à revenir sur le cours autant que possible si vous n'êtes pas à l'aise avec certaines notions.
+//
+//Bonus : Si vous le souhaitez, vous pouvez intégrer des variables dans vos contrôleurs pour les afficher.
 
 use App\Kernel;
 
