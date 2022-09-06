@@ -1,16 +1,15 @@
 <?php
-//Nous souhaitons créer un blog dans lequel nous allons avoir plusieurs pages :
+// Sur notre blog, nous souhaiterions également afficher les articles qu'un utilisateur particulier
+// a écrit une certaine année.
 //
-//https://www.monsuperbloggenial.com/ sera la page d'accueil de notre blog,
+// Par exemple, la page https://www.monsuperbloggenial.com/posts/john/2015 devra afficher
+// tous les articles que John a écrit en 2015, alors que
+// la page https://www.monsuperbloggenial.com/posts/emilie/2012 affichera tous les articles
+// d'Émilie datant de 2012.
 //
-//https://www.monsuperbloggenial.com/posts listera tous les articles présents sur notre blog.
+// Complétez le BlogController avec cette nouvelle route et créez l'action
+// postsFromUserAndYear associée. La méthode pourra simplement afficher le nom et la date rentrée.
 //
-//Complétez le code du contrôleur BlogController en y ajoutant les annotations nécessaires pour réaliser ce blog.
-//
-//Pour vous assurer du bon fonctionnement de votre route, utilisez votre serveur local pour gérer votre
-// application Symfony et rendez-vous sur les URL correspondantes (http://localhost et http://localhost/posts,
-// par défaut). "Accueil" devrait apparaître sur la page d'accueil et "Liste des articles" sur la page /posts.
-
 //<?php
 //
 //namespace App\Controller;
@@ -21,6 +20,9 @@
 //
 //class BlogController extends AbstractController
 //{
+//    /**
+//     * @Route("/", name="blog_index")
+//     */
 //    public function index()
 //    {
 //        return new Response(
@@ -28,6 +30,9 @@
 //        );
 //    }
 //
+//    /**
+//     * @Route("/posts", name="blog_posts")
+//     */
 //    public function posts()
 //    {
 //	      return new Response(
