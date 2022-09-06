@@ -1,8 +1,5 @@
 <?php
-// Dans l'exercice précédent, nous avions créé la route /posts/{user}/{year}.
-// Dans cet exercice, modifiez cette route pour vous assurer que l'année est bien
-// un entier sur 4 chiffres, qui est par défaut à 2022.
-// Spécifiez également que toutes vos routes sont en GET.
+// Dans notre BlogController actuel :
 //<?php
 //
 //namespace App\Controller;
@@ -14,7 +11,7 @@
 //class BlogController extends AbstractController
 //{
 //    /**
-//     * @Route("/", name="blog_index", methods={"GET"})
+//     * @Route("/", name="blog_index")
 //     */
 //    public function index()
 //    {
@@ -24,7 +21,7 @@
 //    }
 //
 //    /**
-//     * @Route("/posts", name="blog_posts", methods={"GET"})
+//     * @Route("/posts", name="blog_posts")
 //     */
 //    public function posts()
 //    {
@@ -34,16 +31,21 @@
 //    }
 //
 //    /**
-//     * @Route("/posts/{user}/{year}", methods={"GET"})
+//     * @Route(
+//     *    "/posts/{user}/{year}",
+//     *    name="blog_posts_users_date"
+//     *    methods={"GET"}),
+//     *    requirements={"year"="^\d{4}$"}
+//     * }
 //     */
-//    public function postsFromUserAndYear(string $user, int $year)
+//    public function postsFromUserAndYear(string $user, int $year = 2022)
 //    {
 //	      return new Response(
 //            '<html><body>'.$user.' '.$year.'</body></html>'
 //        );
 //    }
 //}
-//Vérifiez ensuite votre route sur votre serveur local en saisissant une année à deux chiffres : une erreur devrait apparaître.
+//Modifiez la page d'accueil pour qu'elle affiche l'URL menant aux articles que John a écrit en 2015.
 
 use App\Kernel;
 
