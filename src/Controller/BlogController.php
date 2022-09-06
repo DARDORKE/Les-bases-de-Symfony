@@ -25,7 +25,7 @@ class BlogController extends AbstractController
     }
 
     #[Route('/posts/{name}/{year}', 'blog_posts_byName_byYear')]
-    public function postsFromUserAndYear(string $name, int $year): Response
+    public function postsFromUserAndYear(string $name, int $year = 2020): Response
     {
         return new Response(
             '<html><body>'.$name.' '.$year.'</body></html>'

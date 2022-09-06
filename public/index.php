@@ -1,15 +1,8 @@
 <?php
-// Sur notre blog, nous souhaiterions également afficher les articles qu'un utilisateur particulier
-// a écrit une certaine année.
-//
-// Par exemple, la page https://www.monsuperbloggenial.com/posts/john/2015 devra afficher
-// tous les articles que John a écrit en 2015, alors que
-// la page https://www.monsuperbloggenial.com/posts/emilie/2012 affichera tous les articles
-// d'Émilie datant de 2012.
-//
-// Complétez le BlogController avec cette nouvelle route et créez l'action
-// postsFromUserAndYear associée. La méthode pourra simplement afficher le nom et la date rentrée.
-//
+// Dans l'exercice précédent, nous avions créé la route /posts/{user}/{year}.
+// Dans cet exercice, modifiez cette route pour vous assurer que l'année est bien
+// un entier sur 4 chiffres, qui est par défaut à 2022.
+// Spécifiez également que toutes vos routes sont en GET.
 //<?php
 //
 //namespace App\Controller;
@@ -21,7 +14,7 @@
 //class BlogController extends AbstractController
 //{
 //    /**
-//     * @Route("/", name="blog_index")
+//     * @Route("/", name="blog_index", methods={"GET"})
 //     */
 //    public function index()
 //    {
@@ -31,7 +24,7 @@
 //    }
 //
 //    /**
-//     * @Route("/posts", name="blog_posts")
+//     * @Route("/posts", name="blog_posts", methods={"GET"})
 //     */
 //    public function posts()
 //    {
@@ -39,7 +32,18 @@
 //            '<html><body>Liste des articles</body></html>'
 //        );
 //    }
+//
+//    /**
+//     * @Route("/posts/{user}/{year}", methods={"GET"})
+//     */
+//    public function postsFromUserAndYear(string $user, int $year)
+//    {
+//	      return new Response(
+//            '<html><body>'.$user.' '.$year.'</body></html>'
+//        );
+//    }
 //}
+//Vérifiez ensuite votre route sur votre serveur local en saisissant une année à deux chiffres : une erreur devrait apparaître.
 
 use App\Kernel;
 
