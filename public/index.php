@@ -1,19 +1,40 @@
 <?php
-// L'objectif va être de mettre en place ces pages :
+//Nous souhaitons créer un blog dans lequel nous allons avoir plusieurs pages :
 //
-//L'accueil (route : / )
+//https://www.monsuperbloggenial.com/ sera la page d'accueil de notre blog,
 //
-//La page qui contient les articles ( routes : /articles )
+//https://www.monsuperbloggenial.com/posts listera tous les articles présents sur notre blog.
 //
-//La page de contact ( route : /contact)
+//Complétez le code du contrôleur BlogController en y ajoutant les annotations nécessaires pour réaliser ce blog.
 //
-//La page '' A propos'' ( route : /a-propos)
+//Pour vous assurer du bon fonctionnement de votre route, utilisez votre serveur local pour gérer votre
+// application Symfony et rendez-vous sur les URL correspondantes (http://localhost et http://localhost/posts,
+// par défaut). "Accueil" devrait apparaître sur la page d'accueil et "Liste des articles" sur la page /posts.
+
+//<?php
 //
-//Vous aurez donc à créer plusieurs routes, plusieurs contrôleurs ainsi que plusieurs templates.
+//namespace App\Controller;
 //
-//N'hésitez pas à revenir sur le cours autant que possible si vous n'êtes pas à l'aise avec certaines notions.
+//use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+//use Symfony\Component\Routing\Annotation\Route;
+//use Symfony\Component\HttpFoundation\Response;
 //
-//Bonus : Si vous le souhaitez, vous pouvez intégrer des variables dans vos contrôleurs pour les afficher.
+//class BlogController extends AbstractController
+//{
+//    public function index()
+//    {
+//        return new Response(
+//            '<html><body>Accueil</body></html>'
+//        );
+//    }
+//
+//    public function posts()
+//    {
+//	      return new Response(
+//            '<html><body>Liste des articles</body></html>'
+//        );
+//    }
+//}
 
 use App\Kernel;
 
