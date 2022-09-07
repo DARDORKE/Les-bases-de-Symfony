@@ -20,6 +20,8 @@ class MessageController extends AbstractController
             throw $this->createNotFoundException('Le message n\'existe pas');
         }
 
+        
+
         $response = $this->json(self::MESSAGES[$id]);
         $response->setSharedMaxAge(3600);
         $response->setEtag(md5($response->getContent()));
