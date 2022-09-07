@@ -1,7 +1,5 @@
 <?php
-//Vous disposez du code de base permettant de définir une entité Book.
-//
-//Cette entité correspond à une table dont la structure est la suivante :
+// Définissez trois entités correspondant à la description de table suivante :
 //
 //Table Book
 //Nom
@@ -72,30 +70,151 @@
 //
 //Non
 //
-//La classe se situera dans le répertoire src/Entity/.
+//Table Comment
+//Nom
 //
+//Type
+//
+//Null
+//
+//Clé primaire
+//
+//Unique
+//
+//id
+//
+//int(11)
+//
+//Non
+//
+//Oui
+//
+//text
+//
+//longtext
+//
+//Non
+//
+//Non
+//
+//Non
+//
+//book_id
+//
+//int(11)
+//
+//Non
+//
+//Non
+//
+//Non
+//
+//Table Author
+//Nom
+//
+//Type
+//
+//Null
+//
+//Clé primaire
+//
+//Unique
+//
+//id
+//
+//int(11)
+//
+//Non
+//
+//Oui
+//
+//name
+//
+//varchar(255)
+//
+//Non
+//
+//Non
+//
+//Non
+//
+//Table Book_Author
+//Nom
+//
+//Type
+//
+//Null
+//
+//Clé primaire
+//
+//Unique
+//
+//book_id
+//
+//int(11)
+//
+//Non
+//
+//Oui
+//
+//author_id
+//
+//int(11)
+//
+//Non
+//
+//Oui
+//
+//Les classes se situeront dans le répertoire src/Entity/.
+//
+//On précisera pour chaque attribut les annotations Doctrine nécessaires.
+//
+//Une fois terminé, vous pourrez valider votre schéma avec la commande
+// php bin/console doctrine:schema:validate --skip-sync.
+//
+//Vous disposez du code de base de l'entité Book.
+
 //<?php
 //
 //namespace App\Entity;
 //
+//use Doctrine\ORM\Mapping as ORM;
+//
+///**
+// * @ORM\Entity()
+// */
 //class Book
 //{
-//    /** @var int */
+//    /**
+//     * @ORM\Id()
+//     * @ORM\GeneratedValue()
+//     * @ORM\Column(type="integer")
+//     */
 //    private $id;
 //
-//    /** @var string */
+//    /**
+//     * @ORM\Column(type="string", length=255, unique=true)
+//     */
 //    private $isbn;
 //
-//    /** @var string */
+//    /**
+//     * @ORM\Column(type="string", length=255)
+//     */
 //    private $name;
 //
-//    /** @var string */
+//    /**
+//     * @ORM\Column(type="text", nullable=true)
+//     */
 //    private $abstract;
 //
-//    /** @var int */
+//    /**
+//     * @ORM\Column(type="integer")
+//     */
 //    private $numberOfPages;
 //
-//    /** @var \DateTimeInterface */
+//    /**
+//     * @ORM\Column(type="datetime")
+//     */
 //    private $datePublished;
 //
 //    public function getId(): ?int
