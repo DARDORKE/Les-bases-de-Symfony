@@ -66,4 +66,4 @@ class UserController extends AbstractController
     {
         return $this->redirectToRoute('app_user_item', ['name' => $name], Response::HTTP_MOVED_PERMANENTLY);
     }
-}
+} 
