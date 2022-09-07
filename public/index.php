@@ -8,7 +8,7 @@
 //un header ETag contenant le hash md5 du contenu de notre réponse
 //
 
-//<?php
+//
 //
 //// src/Controller/MessageController.php
 //namespace App\Controller;
@@ -32,6 +32,10 @@
 //        if (!isset(self::MESSAGES[$id])) {
 //            throw $this->createNotFoundException('Le message n\'existe pas');
 //        }
+//
+//        return $this->json(self::MESSAGES[$id]);
+//    }
+//}
 
 use App\Kernel;
 
