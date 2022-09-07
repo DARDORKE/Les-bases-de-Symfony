@@ -1,14 +1,11 @@
 <?php
 
-//Vous disposez du code suivant, créez deux fonctions au sein d'un même contrôleur :
-//
-//Une pour lister les messages dont le nom sera list, retournant une réponse au format format JSON
-// et dont l'URL sera /messages
-//
-//Une pour afficher un message par son index au format JSON (en prenant bien
-// soin de vérifier que le message existe)
+// Vous disposez de l'extrait de code suivant, créez un service qui permettra d'externaliser
+// le contenu de la méthode MessageController::list():
+
 //<?php
 //
+//// src/Controller/MessageController.php
 //namespace App\Controller;
 //
 //use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -18,6 +15,23 @@
 //class MessageController extends AbstractController
 //{
 //    public const MESSAGES = ['Bonjour', 'Bonsoir', 'Au revoir'];
+//
+//    /**
+//     * @Route("/messages", name="message_list")
+//     */
+//    public function list(): Response
+//    {
+//        $messagesWithURLs = [];
+//
+//        foreach (self::MESSAGES as $index => $message) {
+//            $messagesWithURLs[] = [
+//                'text' => $message,
+//                'url' => $this->generateUrl('message_item', ['id' => $index]),
+//            ];
+//        }
+//
+//        return $this->json($messagesWithURLs);
+//    }
 //}
 use App\Kernel;
 
