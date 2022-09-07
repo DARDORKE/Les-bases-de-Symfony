@@ -1,25 +1,8 @@
 <?php
 
-//Complétez le fichier homepage.html.twig et son contrôleur, en utilisant :
-//
-//une variable title dans la balise <title> (en-tête) et <h1> (corps) : « MDN web docs »
-//
-//une variable content dans un paragraphe HTML : « Des ressources pour les développeurs, par les développeurs. »
-
-
-//{# templates/homepage.html.twig #}
-//<!DOCTYPE html>
-//<html lang="fr">
-//    <head>
-//        <meta charset="UTF-8">
-//        <title></title>
-//    </head>
-//    <body>
-//        <h1></h1>
-//        <p></p>
-//    </body>
-//</html>
-
+// À partir du contrôleur ci-dessous, écrivez le contenu du fichier homepage.html.twig
+// en mettant le contenu de la balise <h1> en majuscules.
+// Affichez ensuite le contenu du dernier article en affichant la date au bon format.
 
 //<?php
 //
@@ -32,9 +15,31 @@
 //{
 //    public function homepage()
 //    {
+//        $lastPost = new class {
+//            private string $title;
+//            private \DateTime $createdAt;
+//
+//            public function __construct()
+//            {
+//                $this->title = 'Mon article';
+//                $this->createdAt = new \DateTime();
+//            }
+//
+//            public function getTitle(): string
+//            {
+//                return $this->title;
+//            }
+//
+//            public function getCreatedAt(): \DateTime
+//            {
+//                return $this->createdAt;
+//            }
+//        };
+//
 //        return $this->render('homepage.html.twig', [
-//            'title' =>
-//            'content' =>
+//            'title' => 'Page d\'accueil',
+//            'content' => 'Ceci est le contenu de ma page d\'accueil',
+//            'last_post' => $lastPost,
 //        ]);
 //    }
 //}
