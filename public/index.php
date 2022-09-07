@@ -1,48 +1,39 @@
 <?php
 
-// À partir du contrôleur ci-dessous, écrivez le contenu du fichier homepage.html.twig
-// en mettant le contenu de la balise <h1> en majuscules.
-// Affichez ensuite le contenu du dernier article en affichant la date au bon format.
+// À partir du contrôleur suivant, affichez la liste des utilisateurs et, pour chacun d'eux,
+// leur statut de connexion. Prévoyez aussi un texte dans le cas où la liste des utilisateurs serait vide.
 
 //<?php
 //
-//// src/Controller/HomepageController.php
+//// src/Controller/UserController.php
 //namespace App\Controller;
 //
 //use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+//use Symfony\Component\HttpFoundation\Response;
 //
-//class HomepageController extends AbstractController
+//class UserController extends AbstractController
 //{
-//    public function homepage()
+//    private const USERS = [
+//        ['name' => 'Nicolas', 'connected' => false],
+//        ['name' => 'Alice', 'connected' => true],
+//        ['name' => 'Grégory', 'connected' => false],
+//    ];
+//
+//    public function list(): Response
 //    {
-//        $lastPost = new class {
-//            private string $title;
-//            private \DateTime $createdAt;
+//        return $this->render('user/list.html.twig', [
+//            'users' => self::USERS,
+//        ]);
+//    }
 //
-//            public function __construct()
-//            {
-//                $this->title = 'Mon article';
-//                $this->createdAt = new \DateTime();
-//            }
-//
-//            public function getTitle(): string
-//            {
-//                return $this->title;
-//            }
-//
-//            public function getCreatedAt(): \DateTime
-//            {
-//                return $this->createdAt;
-//            }
-//        };
-//
-//        return $this->render('homepage.html.twig', [
-//            'title' => 'Page d\'accueil',
-//            'content' => 'Ceci est le contenu de ma page d\'accueil',
-//            'last_post' => $lastPost,
+//    public function item(int $id): Response
+//    {
+//        return $this->render('user/item.html.twig', [
+//            'user' => self::USERS[$id],
 //        ]);
 //    }
 //}
+
 
 use App\Kernel;
 
