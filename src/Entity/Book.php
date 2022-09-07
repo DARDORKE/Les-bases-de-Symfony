@@ -6,6 +6,7 @@ use App\Repository\BookRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
+#[ORM\Table(name: 'user')]
 #[ORM\Entity(repositoryClass: BookRepository::class)]
 class Book
 {
