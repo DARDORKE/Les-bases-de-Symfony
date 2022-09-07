@@ -1,7 +1,13 @@
 <?php
 
-// Écrivez votre propre filtre Twig qui
-// convertira vos booléens en chaîne de caractères : "Oui" pour true et "Non" pour false.
+// Écrivez votre propre fonction Twig qui calculera la moyenne de commentaires par articles
+// pour chaque utilisateur, en utilisant cette liste d'utilisateurs :
+
+//private const USERS = [
+//    ['name' => 'Nicolas', 'connected' => false, 'commentsPerPost' => [3, 6, 10, 2]],
+//    ['name' => 'Alice', 'connected' => true, 'commentsPerPost' => [15, 5, 7, 5, 22, 10, 9, 3]],
+//    ['name' => 'Grégory', 'connected' => false, 'commentsPerPost' => []],
+//];
 
 
 use App\Kernel;
