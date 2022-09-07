@@ -5,8 +5,8 @@ namespace App\Entity;
 use App\Repository\BookRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\Types\Integer;
 
-#[ORM\Table(name: 'user')]
 #[ORM\Entity(repositoryClass: BookRepository::class)]
 class Book
 {
@@ -15,11 +15,17 @@ class Book
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, unique: true)]
     private ?string $isbn = null;
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;
+
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $abstract = null;
+
+    #[ORM\Column]
+    private ?int $number_of_pages = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $date_published = null;
@@ -49,6 +55,30 @@ class Book
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getAbstract(): ?string
+    {
+        return $this->abstract;
+    }
+
+    public function setAbstract(?string $abstract): self
+    {
+        $this->abstract = $abstract;
+
+        return $this;
+    }
+
+    public function getNumberOfPages(): ?int
+    {
+        return $this->number_of_pages;
+    }
+
+    public function setNumberOfPages(int $number_of_pages): self
+    {
+        $this->number_of_pages = $number_of_pages;
 
         return $this;
     }
