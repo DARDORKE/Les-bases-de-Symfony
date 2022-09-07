@@ -1,29 +1,7 @@
 <?php
 
-// En partant de l'exercice précédent, réécrivez le template de la liste des utilisateurs
-// en utilisant :
-//
-//un template parent qui sera étendu
-//
-//un template partiel qui sera utilisé dans la boucle des utilisateurs
-//
-//un template pour la vue qui fera le liant entre les deux autres templates
-//
-//Pour rappel :
-
-//<!DOCTYPE html>
-//<html lang="fr">
-//    <body>
-//        <h1>Les utilisateurs</h1>
-//        <ul>
-//            {% for user in users %}
-//            <li>{{ user.name }} : {% if user.connected %}Connecté{% else %}Non connecté{% endif %}</li>
-//            {% else %}
-//            <li>Aucune utilisateur trouvé !</li>
-//            {% endfor %}
-//        </ul>
-//    </body>
-//</html>
+// Écrivez votre propre filtre Twig qui
+// convertira vos booléens en chaîne de caractères : "Oui" pour true et "Non" pour false.
 
 
 use App\Kernel;
