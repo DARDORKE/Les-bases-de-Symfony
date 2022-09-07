@@ -1,6 +1,6 @@
 <?php
 
-namespace App\TwigFilter;
+namespace App\Twig;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
