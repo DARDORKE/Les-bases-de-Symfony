@@ -1,1 +1,1 @@
-<li>{{ user.name }} : {% if user.connected %}Connecté{% else %}Non connecté{% endif %}</li>
+<li>{{ user.name }} (Connecté : {{ user.connected|boolToString }})</li>
