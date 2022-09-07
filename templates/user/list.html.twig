@@ -1,0 +1,14 @@
+{# templates/user/list.html.twig #}
+<!DOCTYPE html>
+<html lang="fr">
+<body>
+<h1>Les utilisateurs</h1>
+<ul>
+    {% for user in users %}
+        <li>{{ user.name }} : {% if user.connected %}Connecté{% else %}Non connecté{% endif %}</li>
+    {% else %}
+        <li>Aucune utilisateur trouvé !</li>
+    {% endfor %}
+</ul>
+</body>
+</html>

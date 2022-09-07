@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class UserController extends AbstractController
 {
@@ -14,16 +15,17 @@ class UserController extends AbstractController
         ['name' => 'Grégory', 'connected' => false],
     ];
 
+    #[Route('/list')]
     public function list(): Response
     {
-        return $this->render('../templates/list.html.twig', [
+        return $this->render('user/list.html.twig', [
             'users' => self::USERS,
         ]);
     }
 
     public function item(int $id): Response
     {
-        return $this->render('../templates/list.html.twig', [
+        return $this->render('user/list.html.twig', [
             'user' => self::USERS[$id],
         ]);
     }
