@@ -1,12 +1,24 @@
 <?php
 
-// Créez votre premier contrôleur intitulé BasicController en vous aidant de la commande
-// Symfony make:controller, puis personnalisez le message affiché pour renvoyer une réponse
-// contenant du code HTML.
+//Vous disposez du code suivant, créez deux fonctions au sein d'un même contrôleur :
 //
-//Une fois votre contrôleur créé, installez la debug toolbar du
-// profiler Symfony au moyen de la commande composer req profiler,
-// et trouvez-y les informations concernant la Request et la Response.
+//Une pour lister les messages dont le nom sera list, retournant une réponse au format format JSON
+// et dont l'URL sera /messages
+//
+//Une pour afficher un message par son index au format JSON (en prenant bien
+// soin de vérifier que le message existe)
+//<?php
+//
+//namespace App\Controller;
+//
+//use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+//use Symfony\Component\HttpFoundation\Response;
+//use Symfony\Component\Routing\Annotation\Route;
+//
+//class MessageController extends AbstractController
+//{
+//    public const MESSAGES = ['Bonjour', 'Bonsoir', 'Au revoir'];
+//}
 use App\Kernel;
 
 require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
