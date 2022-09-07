@@ -1,38 +1,29 @@
 <?php
 
-// À partir du contrôleur suivant, affichez la liste des utilisateurs et, pour chacun d'eux,
-// leur statut de connexion. Prévoyez aussi un texte dans le cas où la liste des utilisateurs serait vide.
+// En partant de l'exercice précédent, réécrivez le template de la liste des utilisateurs
+// en utilisant :
+//
+//un template parent qui sera étendu
+//
+//un template partiel qui sera utilisé dans la boucle des utilisateurs
+//
+//un template pour la vue qui fera le liant entre les deux autres templates
+//
+//Pour rappel :
 
-//<?php
-//
-//// src/Controller/UserController.php
-//namespace App\Controller;
-//
-//use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-//use Symfony\Component\HttpFoundation\Response;
-//
-//class UserController extends AbstractController
-//{
-//    private const USERS = [
-//        ['name' => 'Nicolas', 'connected' => false],
-//        ['name' => 'Alice', 'connected' => true],
-//        ['name' => 'Grégory', 'connected' => false],
-//    ];
-//
-//    public function list(): Response
-//    {
-//        return $this->render('user/list.html.twig', [
-//            'users' => self::USERS,
-//        ]);
-//    }
-//
-//    public function item(int $id): Response
-//    {
-//        return $this->render('user/item.html.twig', [
-//            'user' => self::USERS[$id],
-//        ]);
-//    }
-//}
+//<!DOCTYPE html>
+//<html lang="fr">
+//    <body>
+//        <h1>Les utilisateurs</h1>
+//        <ul>
+//            {% for user in users %}
+//            <li>{{ user.name }} : {% if user.connected %}Connecté{% else %}Non connecté{% endif %}</li>
+//            {% else %}
+//            <li>Aucune utilisateur trouvé !</li>
+//            {% endfor %}
+//        </ul>
+//    </body>
+//</html>
 
 
 use App\Kernel;
